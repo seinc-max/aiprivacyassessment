@@ -1,43 +1,501 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Privacy Assessment</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f9fafb;
-            color: #111827;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            max-width: 600px;
-        }
-        h1 {
-            color: #1a2744;
-            margin-bottom: 1rem;
-        }
-        p {
-            font-size: 1.125rem;
-            line-height: 1.5;
-            color: #4b5563;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- PRIMARY SEO: keyword front-loaded in first 60 chars, 155-char description -->
+<title>AI Privacy Risk Assessment: Free PIPEDA Checker</title>
+<meta name="description" content="Free AI privacy risk assessment for Canadian businesses. Check your PIPEDA exposure and shadow AI risk in 2 minutes. No signup, instant score." />
+<meta name="keywords" content="AI privacy risk assessment, PIPEDA compliance checker, shadow AI audit, AI acceptable use policy Canada, ChatGPT PIPEDA, AI governance assessment, free AI compliance tool Canada" />
+<meta name="author" content="Trueline IT" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<link rel="canonical" href="https://aiprivacyassessment.com/" />
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="AI Privacy Risk Assessment: Free PIPEDA Checker for Canadian Business" />
+<meta property="og:description" content="Check your business's AI privacy exposure under PIPEDA in 2 minutes. No signup. Instant score with specific gaps and what to fix." />
+<meta property="og:url" content="https://aiprivacyassessment.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_CA" />
+<meta property="og:site_name" content="AI Privacy Risk Assessment" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Privacy Risk Assessment: Free PIPEDA Checker" />
+<meta name="twitter:description" content="Check your business's AI privacy exposure under PIPEDA in 2 minutes. No signup. Instant score." />
+
+<!-- CWV: preconnect + non-blocking font load with swap -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" /></noscript>
+
+<!-- ============ STRUCTURED DATA STACK ============ -->
+
+<!-- 1. WebApplication + entity signals (about/mentions with Wikidata IDs) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Privacy Risk Assessment",
+  "url": "https://aiprivacyassessment.com/",
+  "description": "Free self-assessment tool that evaluates a Canadian business's AI privacy risk and PIPEDA compliance exposure, including shadow AI, Microsoft 365 Copilot configuration, and cyber insurance readiness.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "en-CA",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+  "about": [
+    { "@type": "Thing", "name": "PIPEDA", "sameAs": "https://www.wikidata.org/wiki/Q7174532" },
+    { "@type": "Thing", "name": "Artificial intelligence", "sameAs": "https://www.wikidata.org/wiki/Q11660" },
+    { "@type": "Thing", "name": "Information privacy", "sameAs": "https://www.wikidata.org/wiki/Q1141231" }
+  ],
+  "mentions": [
+    { "@type": "Organization", "name": "Office of the Privacy Commissioner of Canada", "sameAs": "https://www.wikidata.org/wiki/Q7079225" },
+    { "@type": "SoftwareApplication", "name": "ChatGPT", "sameAs": "https://www.wikidata.org/wiki/Q115564437" },
+    { "@type": "Product", "name": "Microsoft Copilot", "sameAs": "https://www.wikidata.org/wiki/Q124007641" }
+  ]
+}
+</script>
+
+<!-- 2. Article schema for the content body (E-E-A-T: author, dates, publisher) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Privacy Risk Assessment: Free PIPEDA Checker for Canadian Business",
+  "description": "How Canadian businesses can assess AI privacy risk and PIPEDA exposure from employee use of public AI tools.",
+  "datePublished": "2026-06-06",
+  "dateModified": "2026-06-06",
+  "inLanguage": "en-CA",
+  "author": {
+    "@type": "Organization",
+    "name": "Trueline IT",
+    "url": "https://truelineit.com",
+    "description": "AI governance and automation specialists for Canadian professional services businesses."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Trueline IT",
+    "url": "https://truelineit.com"
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://aiprivacyassessment.com/" }
+}
+</script>
+
+<!-- 3. HowTo schema (high-impact 2026 type) for the assessment process -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to assess your business's AI privacy risk",
+  "description": "A step-by-step process to evaluate whether your business's use of AI tools creates PIPEDA exposure.",
+  "totalTime": "PT2M",
+  "tool": [{ "@type": "HowToTool", "name": "AI Privacy Risk Assessment" }],
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Review your AI policy", "text": "Check whether your business has a written AI Acceptable Use Policy that defines approved tools and what data can be entered." },
+    { "@type": "HowToStep", "position": 2, "name": "Identify shadow AI", "text": "Determine which AI tools your employees are actually using, including browser extensions and embedded AI features." },
+    { "@type": "HowToStep", "position": 3, "name": "Check client data exposure", "text": "Assess whether confidential client data has been entered into public AI tools that may train on it." },
+    { "@type": "HowToStep", "position": 4, "name": "Review insurance and configuration", "text": "Confirm your cyber insurance covers AI incidents and that Microsoft 365 Copilot is configured with proper data boundaries." },
+    { "@type": "HowToStep", "position": 5, "name": "Calculate your risk score", "text": "Combine your answers into an overall AI privacy risk score and prioritize the gaps that create the most exposure." }
+  ]
+}
+</script>
+
+<!-- 4. BreadcrumbList (high-impact 2026 type, renders in SERP) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aiprivacyassessment.com/" },
+    { "@type": "ListItem", "position": 2, "name": "AI Privacy Risk Assessment", "item": "https://aiprivacyassessment.com/" }
+  ]
+}
+</script>
+
+<!-- 5. FAQPage (retained for AI Overviews / Perplexity / ChatGPT citation) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is my business at risk if employees use ChatGPT with client data?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. In May 2026, Canada's Privacy Commissioner ruled that ChatGPT violated PIPEDA. If employees use public AI tools with confidential client data and you have no documented AI policy, your business bears the regulatory and legal liability. Legal, accounting, and financial services firms face the highest exposure." } },
+    { "@type": "Question", "name": "What is shadow AI?", "acceptedAnswer": { "@type": "Answer", "text": "Shadow AI is AI usage inside a business without authorization or oversight, including ChatGPT, Copilot, Gemini, browser extensions, and embedded AI features. Around 38% of employees admit to sharing sensitive work information with AI tools without permission." } },
+    { "@type": "Question", "name": "What is an AI Acceptable Use Policy?", "acceptedAnswer": { "@type": "Answer", "text": "A written document defining which AI tools employees can use, what data can be entered, and consequences for violations. The Law Society of Ontario and CPA Canada recommend documented AI policies, and cyber insurers increasingly require them at renewal." } },
+    { "@type": "Question", "name": "What PIPEDA fines can a business face for AI data misuse?", "acceptedAnswer": { "@type": "Answer", "text": "Under current PIPEDA, fines reach up to C$100,000 per violation. Reform legislation moving through Parliament in 2026 would raise penalties to the greater of C$25 million or 5% of gross global revenue." } },
+    { "@type": "Question", "name": "Does cyber insurance cover AI data breaches?", "acceptedAnswer": { "@type": "Answer", "text": "Not automatically. Cyber insurers now add AI governance questionnaires to renewals. Businesses without a documented AI policy may face higher premiums or denied claims after an AI-related incident." } }
+  ]
+}
+</script>
+
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --ink:#111110;--ink2:#3d3d3a;--ink3:#6b6b66;--ink4:#9b9b95;
+    --rule:#e3e2dd;--bg:#fbfaf7;--paper:#fff;
+    --crit:#b3261e;--mod:#a8730a;--low:#2e7031;
+    --serif:'Newsreader',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;
+    /* fallback metrics to minimise CLS before webfont swap */
+  }
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink2);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:660px;margin:0 auto;padding:0 20px}
+
+  /* SKIP LINK (a11y → satisfaction) */
+  .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:8px 14px;z-index:99}
+  .skip:focus{left:8px;top:8px}
+
+  /* HEADER + breadcrumb */
+  header{padding:28px 0 20px;border-bottom:1px solid var(--rule);margin-bottom:32px}
+  .kicker{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink3)}
+  nav.crumb{font-size:12px;color:var(--ink4);margin-top:6px}
+  nav.crumb a{color:var(--ink4);text-decoration:none}
+  nav.crumb a:hover{color:var(--ink3)}
+
+  /* HEADING */
+  .lede{margin-bottom:28px}
+  .lede h1{font-family:var(--serif);font-size:clamp(28px,5.5vw,40px);font-weight:400;color:var(--ink);line-height:1.18;margin-bottom:12px;letter-spacing:-.01em}
+  .lede p.sub{font-size:16px;color:var(--ink3);line-height:1.7;max-width:540px}
+  .lede p.sub a{color:var(--ink3);text-underline-offset:3px}
+  .meta-line{font-size:12px;color:var(--ink4);margin-top:14px;display:flex;gap:14px;flex-wrap:wrap}
+  .meta-line span{display:inline-flex;align-items:center;gap:5px}
+
+  .why{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:15px 18px;margin-bottom:34px;font-size:13.5px;color:var(--ink3);line-height:1.65}
+  .why strong{color:var(--ink2)}
+
+  /* PROGRESS */
+  .prog{margin-bottom:26px}
+  .prog-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--ink4);margin-bottom:8px;font-variant-numeric:tabular-nums}
+  .prog-track{height:3px;background:var(--rule);border-radius:3px;overflow:hidden}
+  .prog-fill{height:3px;background:var(--ink);width:0;transition:width .35s ease}
+
+  /* QUESTION */
+  .qblock{min-height:340px}
+  .qcat{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--ink4);margin-bottom:10px}
+  .qtext{font-family:var(--serif);font-size:clamp(21px,4vw,27px);color:var(--ink);line-height:1.28;margin-bottom:8px;font-weight:400}
+  .qctx{font-size:13.5px;color:var(--ink3);margin-bottom:22px;line-height:1.6}
+  .alist{display:grid;gap:8px;margin-bottom:26px}
+  .aitem{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid var(--rule);border-radius:5px;background:var(--paper);cursor:pointer;transition:border-color .12s;text-align:left;width:100%;font-family:var(--sans)}
+  .aitem:hover{border-color:var(--ink3)}
+  .aitem.on{border-color:var(--ink);background:var(--bg)}
+  .adot{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--rule);flex-shrink:0;margin-top:2px;position:relative;transition:border-color .12s}
+  .aitem.on .adot,.aitem:hover .adot{border-color:var(--ink)}
+  .aitem.on .adot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;background:var(--ink);border-radius:50%}
+  .alabel{font-size:14px;color:var(--ink2);line-height:1.45}
+  .anote{font-size:12px;color:var(--ink4);margin-top:2px}
+  .qnav{display:flex;gap:12px;align-items:center}
+  .back{font-family:var(--sans);font-size:13px;color:var(--ink4);background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+  .back:hover{color:var(--ink2)}
+  .next{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--bg);background:var(--ink);border:none;padding:11px 26px;border-radius:5px;cursor:pointer;transition:opacity .12s}
+  .next:hover{opacity:.86}
+  .next:disabled{background:var(--rule);color:var(--ink4);cursor:not-allowed}
+
+  hr{border:none;border-top:1px solid var(--rule);margin:38px 0}
+
+  /* RESULTS */
+  #res{display:none}
+  #res.on{display:block;animation:fu .3s ease}
+  @keyframes fu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  .srow{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .score{font-family:var(--serif);font-style:italic;font-size:64px;line-height:1;color:var(--ink)}
+  .sden{font-size:18px;color:var(--ink4)}
+  .lvl{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:4px 10px;border-radius:3px;margin-bottom:16px}
+  .l-crit,.l-high{background:#fbeceb;color:var(--crit)}
+  .l-mod{background:#fbf3e2;color:var(--mod)}
+  .l-low{background:#eef6ef;color:var(--low)}
+  .rhead{font-family:var(--serif);font-size:clamp(22px,4vw,30px);color:var(--ink);line-height:1.25;margin-bottom:12px;font-weight:400}
+  .rsum{font-size:15px;color:var(--ink3);line-height:1.75;margin-bottom:30px}
+  .gh{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--ink4);margin-bottom:12px}
+  .grow{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--rule);animation:fu .3s ease both}
+  .grow:last-child{border-bottom:1px solid var(--rule)}
+  .gnum{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink4);flex-shrink:0;width:20px;margin-top:1px}
+  .gtitle{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px}
+  .gdesc{font-size:13px;color:var(--ink3);line-height:1.6}
+  .means{margin:30px 0}
+  .mh{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--ink4);margin-bottom:12px}
+  .mi{display:flex;gap:12px;font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:10px}
+  .mdash{color:var(--ink4);flex-shrink:0}
+
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 0}
+  .act-btn{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink2);background:var(--paper);border:1px solid var(--rule);padding:10px 16px;border-radius:5px;cursor:pointer;transition:border-color .12s}
+  .act-btn:hover{border-color:var(--ink3)}
+
+  /* RESOURCES */
+  .resb{margin:36px 0 0}
+  .rsh{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--ink4);margin-bottom:12px}
+  .ritem{display:flex;padding:12px 0;border-top:1px solid var(--rule);font-size:13px}
+  .ritem:last-child{border-bottom:1px solid var(--rule)}
+  .ritem a{color:var(--ink2);text-decoration:underline;text-underline-offset:3px}
+  .ritem a:hover{color:var(--ink)}
+  .rdesc{color:var(--ink4);font-size:12px;margin-top:2px}
+
+  .restart{margin-top:26px;background:none;border:none;font-family:var(--sans);font-size:13px;color:var(--ink4);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+  .restart:hover{color:var(--ink2)}
+
+  /* SEO CONTENT */
+  .seo{margin-top:60px;padding-top:38px;border-top:1px solid var(--rule)}
+  .seo h2{font-family:var(--serif);font-size:clamp(21px,4vw,28px);font-weight:400;color:var(--ink);line-height:1.3;margin-bottom:14px}
+  .seo h3{font-size:15px;font-weight:600;color:var(--ink);margin:28px 0 8px}
+  .seo p{font-size:14px;color:var(--ink3);line-height:1.8;margin-bottom:14px}
+  .seo a{color:var(--ink3);text-underline-offset:3px}
+  .pq{border-left:2px solid var(--rule);padding:2px 0 2px 18px;margin:20px 0;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink2);line-height:1.6}
+  .pq cite{display:block;font-style:normal;font-family:var(--sans);font-size:12px;color:var(--ink4);margin-top:6px}
+
+  .faq{margin-top:30px}
+  details{border-top:1px solid var(--rule)}
+  details:last-child{border-bottom:1px solid var(--rule)}
+  summary{padding:16px 0;font-size:14px;font-weight:600;color:var(--ink2);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:16px;color:var(--ink4);margin-left:16px}
+  details[open] summary::after{content:"−"}
+  details p{font-size:13px;color:var(--ink3);line-height:1.75;padding-bottom:16px}
+
+  footer{margin:46px 0 32px;padding-top:24px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink4);line-height:1.7}
+  footer a{color:var(--ink4);text-decoration:underline;text-underline-offset:2px}
+  footer a:hover{color:var(--ink3)}
+
+  @media print{
+    .prog,.qnav,.actions,.restart,.skip,.seo,.why{display:none!important}
+    body{background:#fff}
+    .ritem{break-inside:avoid}
+  }
+  @media (max-width:480px){
+    .qblock{min-height:0}
+    .score{font-size:52px}
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>AI Privacy Assessment</h1>
-        <p>Welcome to the AI Privacy Assessment tool. This project is currently undergoing maintenance and initial setup.</p>
+<a href="#tool" class="skip">Skip to assessment</a>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">AI Privacy Risk Assessment</div>
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> › AI Privacy Risk Assessment</nav>
+  </header>
+
+  <main id="tool">
+  <section id="assessment">
+    <div class="lede">
+      <h1>How exposed is your business to AI privacy risk?</h1>
+      <p class="sub">A free self-assessment for Canadian businesses. Ten questions, instant results, no signup. Based on <a href="https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2026/pipeda-2026-002/" target="_blank" rel="noopener">Canada's PIPEDA findings</a>, Law Society of Ontario guidance, and current cyber-insurance standards.</p>
+      <div class="meta-line">
+        <span>Updated June 2026</span>
+        <span>·</span>
+        <span>2-minute assessment</span>
+        <span>·</span>
+        <span>Runs entirely in your browser</span>
+      </div>
     </div>
+
+    <div class="why"><strong>Why this exists:</strong> In May 2026, Canada's Privacy Commissioner ruled that ChatGPT violated PIPEDA. Most Canadian businesses using public AI tools with client data have no policy, no audit trail, and no documentation for their insurer. This tool helps you understand your exposure in about two minutes — nothing you enter is stored or sent anywhere.</div>
+
+    <div class="prog">
+      <div class="prog-meta"><span id="pLabel">Question 1 of 10</span><span id="pPct">0%</span></div>
+      <div class="prog-track"><div class="prog-fill" id="pFill"></div></div>
+    </div>
+
+    <div id="qblock" class="qblock">
+      <div class="qcat" id="qCat"></div>
+      <h2 class="qtext" id="qText" style="font-weight:400"></h2>
+      <div class="qctx" id="qCtx"></div>
+      <div class="alist" id="aList"></div>
+      <div class="qnav">
+        <button class="back" id="bBack" onclick="prev()" style="display:none">← Back</button>
+        <button class="next" id="bNext" onclick="next()" disabled>Continue →</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="res" aria-live="polite">
+    <div class="srow"><span class="score" id="rScore">0</span><span class="sden">/ 10</span></div>
+    <span class="lvl" id="rLvl"></span>
+    <h2 class="rhead" id="rHead" style="font-weight:400"></h2>
+    <p class="rsum" id="rSum"></p>
+
+    <div id="gSec">
+      <p class="gh" id="gHead"></p>
+      <div id="gList"></div>
+    </div>
+
+    <div class="means">
+      <p class="mh">What this means</p>
+      <div id="mList"></div>
+    </div>
+
+    <div class="actions">
+      <button class="act-btn" onclick="window.print()">⎙ Save / print results</button>
+      <button class="act-btn" onclick="copyResults()" id="copyBtn">⧉ Copy results</button>
+    </div>
+
+    <hr />
+
+    <div class="resb">
+      <p class="rsh">Resources &amp; references</p>
+      <div class="ritem"><div><a href="https://www.priv.gc.ca/en/privacy-topics/technology/artificial-intelligence/" target="_blank" rel="noopener">Office of the Privacy Commissioner — AI &amp; Privacy</a><div class="rdesc">OPC guidance on AI and PIPEDA, including the May 2026 ChatGPT ruling</div></div></div>
+      <div class="ritem"><div><a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda-compliance-help/pipeda-compliance-and-training-tools/pipeda_sa_tool_200807/" target="_blank" rel="noopener">OPC PIPEDA Self-Assessment Tool</a><div class="rdesc">The official government self-assessment for PIPEDA compliance</div></div></div>
+      <div class="ritem"><div><a href="https://lso.ca/lawyers/practice-supports-and-resources/topics/the-lawyer-client-relationship/artificial-intelligence" target="_blank" rel="noopener">Law Society of Ontario — AI Guidance</a><div class="rdesc">Official LSO guidance on confidentiality and competence when using AI</div></div></div>
+      <div class="ritem"><div><a href="https://www.cpacanada.ca/en/business-and-accounting-resources/strategy-risk-and-governance/technology-and-transformation/publications/guide-on-artificial-intelligence" target="_blank" rel="noopener">CPA Canada — AI Guide for Accountants</a><div class="rdesc">Guidance on AI adoption, liability, and data governance for accounting firms</div></div></div>
+      <div class="ritem"><div><a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy" target="_blank" rel="noopener">Microsoft — Copilot Data Protection</a><div class="rdesc">Microsoft's documentation on Copilot data boundaries and configuration</div></div></div>
+      <div class="ritem"><div><a href="https://truelineit.com" target="_blank" rel="noopener">Trueline IT</a><div class="rdesc">AI governance and automation for Canadian professional services businesses</div></div></div>
+    </div>
+
+    <button class="restart" onclick="restart()">↩ Start over</button>
+  </section>
+  </main>
+
+  <!-- SEO CONTENT -->
+  <section class="seo">
+    <h2>About this AI privacy risk assessment</h2>
+    <p>This tool evaluates ten risk factors across seven domains: written AI policy, shadow AI visibility, client-data exposure, cyber-insurance readiness, Microsoft 365 Copilot configuration, employee training, professional regulatory obligations, incident response, vendor data practices, and overall posture. Each question is weighted by severity, and results are calculated entirely in your browser — nothing is stored or transmitted.</p>
+
+    <h3>Why Canadian businesses face AI privacy risk in 2026</h3>
+    <p>The regulatory environment shifted in May 2026 when the Office of the Privacy Commissioner formally ruled that OpenAI's ChatGPT violated PIPEDA, citing problems with data collection, consent, and safeguards. The ruling matters because it establishes how Canadian privacy law applies to data flowing through public AI systems — which affects every business whose employees use those tools.</p>
+
+    <div class="pq">"76% of employees admit to using unauthorized AI tools at work. Most of their managers don't know."<cite>— IBM Institute for Business Value, 2025</cite></div>
+
+    <p>For professional services businesses — legal firms, accounting practices, financial advisories, healthcare clinics — exposure compounds because employees handle confidential client data under strict professional obligations. The Law Society of Ontario has warned lawyers that AI tool usage with client data risks disciplinary action. CPA Canada confirms accountants retain personal liability for AI-related errors. Neither body has banned AI; both require documented governance.</p>
+
+    <h3>What is shadow AI?</h3>
+    <p>Shadow AI is AI usage inside a business without authorization or oversight. In 2026 this extends well beyond ChatGPT to AI writing assistants in browsers, Copilot features in Microsoft 365, note-taking tools that summarize meetings, browser extensions that read page content, and AI baked into CRMs and email clients. Many are active by default, many retain content for training, and most users have not read the data-handling terms.</p>
+
+    <h3>What is an AI Acceptable Use Policy and do you need one?</h3>
+    <p>An AI Acceptable Use Policy is a written document defining which AI tools employees may use, what categories of data can and cannot be entered, disclosure rules for AI-generated content, prohibited uses, and consequences for violations. The Law Society of Ontario, CPA Canada, and most Canadian cyber insurers now treat a documented policy as a baseline requirement. Without one, a business has no documented standard of care if something goes wrong.</p>
+
+    <h3>How cyber insurance is changing</h3>
+    <p>Cyber insurers began adding AI governance questions to renewals in 2025 and accelerated through 2026 after the OPC ruling. Common questions include whether you have a written AI policy, which tools employees are authorized to use, whether Copilot is configured with data boundaries, and whether staff have completed AI privacy training. Businesses that cannot answer may face premium increases or exclusions for AI-related incidents.</p>
+
+    <h3>How this score is calculated</h3>
+    <p>This is a self-reported assessment, not a formal audit. Scores reflect your answers, not an independent review of your systems. The two highest-weighted questions — written AI policy and shadow AI visibility — create the most direct PIPEDA exposure and are most commonly missing. A low score does not guarantee compliance and a high score does not guarantee a problem; for a formal review, consult a qualified privacy professional.</p>
+
+    <hr />
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details><summary>Is my business at risk if employees use ChatGPT with client data?</summary><p>Yes. In May 2026, Canada's Privacy Commissioner ruled that ChatGPT violated PIPEDA. If employees use public AI tools with confidential client data and you have no documented AI policy, your business bears the regulatory and legal liability. Legal, accounting, and financial services firms face the highest exposure because they handle sensitive information under strict professional obligations.</p></details>
+      <details><summary>What does a PIPEDA violation actually cost?</summary><p>Under current PIPEDA, fines reach up to C$100,000 per violation. Reform legislation moving through Parliament in 2026 would raise penalties to the greater of C$25 million or 5% of gross global revenue. Beyond fines, an investigation triggers mandatory breach notification, reputational damage, and potential civil liability — and for regulated professionals, disciplinary proceedings.</p></details>
+      <details><summary>Is Microsoft Copilot safe to use with client data?</summary><p>Copilot can be safe, but only if configured correctly. By default, Microsoft 365 Copilot can access everything in your tenant that each user can see — including data from other departments. Without permission scoping it can surface sensitive data across your organization. Business and enterprise tiers do not train Microsoft's models on your data, but still require proper configuration.</p></details>
+      <details><summary>What is the difference between this assessment and a formal audit?</summary><p>This is a self-reported tool that identifies likely gaps and gives a risk score to help prioritize. A formal shadow AI audit is a structured review of your actual environment — every AI tool in use, how each handles data, which create compliance risk, and a remediation plan — producing documentation suitable for an insurer, regulator, or client inquiry.</p></details>
+      <details><summary>Does cyber insurance cover AI-related data incidents?</summary><p>Not automatically. Insurers now add AI governance questionnaires to renewals. Businesses without a documented AI policy, shadow AI audit, or employee training may face higher premiums or denied claims. The key documents insurers look for: a written AI Acceptable Use Policy, evidence of training, and confirmation that tools like Copilot are configured with appropriate boundaries.</p></details>
+      <details><summary>Where can I get a proper AI policy for my business?</summary><p>Several organizations publish templates and guidance — the Law Society of Ontario and CPA Canada for their professions, and Microsoft for Copilot governance. For a custom AI Acceptable Use Policy with technical implementation, M365 configuration, shadow AI audit, and ongoing management, you can work with a specialist. See the resources section above, including the OPC's own self-assessment tool.</p></details>
+    </div>
+  </section>
+
+  <footer>
+    <p>This tool is for general informational purposes only and does not constitute legal, regulatory, or professional advice. Results reflect self-reported answers and are not a substitute for a formal compliance audit or legal opinion. For questions about PIPEDA, consult a qualified privacy professional or the <a href="https://www.priv.gc.ca" target="_blank" rel="noopener">Office of the Privacy Commissioner of Canada</a>.</p>
+    <p style="margin-top:8px">Built and maintained by <a href="https://truelineit.com" target="_blank" rel="noopener">Trueline IT</a> · <a href="https://truelineit.com/privacy" target="_blank" rel="noopener">Privacy</a> · Last updated June 2026</p>
+  </footer>
+
+</div>
+
+<script>
+const Q=[
+{cat:"Policy & Documentation",text:"Does your business have a written AI Acceptable Use Policy?",ctx:"A document defining which AI tools employees may use, what data can be entered, and the rules.",w:2,
+opts:[{t:"Yes — documented, signed off, and shared with all staff",s:0},{t:"We have an informal understanding but nothing written",s:1},{t:"No — we don't have one",s:2},{t:"I'm not sure",s:2}],
+gap:{t:"No written AI Acceptable Use Policy",d:"Without a written policy there is no documented standard of care. If an employee causes a data incident using AI, the business has no formal defence under PIPEDA."}},
+{cat:"Shadow AI",text:"Do you know which AI tools your employees are currently using?",ctx:"Includes ChatGPT, Claude, Gemini, Copilot features in Microsoft 365, browser extensions, and AI built into software you already use.",w:2,
+opts:[{t:"Yes — we have a complete, current list of approved tools",s:0},{t:"We know the main ones but not everything in use",s:1},{t:"No — we have no visibility into what's being used",s:2},{t:"We've never looked into it",s:2}],
+gap:{t:"No visibility into AI tool usage",d:"38% of employees admit sharing sensitive work information with AI tools without permission. Without a shadow AI audit you cannot know what client data has left the building."}},
+{cat:"Client Data Exposure",text:"Have employees used a public AI tool — like ChatGPT — with client files, contracts, or financial data?",ctx:"Includes pasting text, uploading documents, or using AI to summarize or draft content containing client information.",w:2,
+opts:[{t:"No — we have technical controls that prevent this",s:0},{t:"Possibly — but we've never confirmed it",s:1},{t:"Yes — it happens regularly",s:2},{t:"I don't know",s:2}],
+gap:{t:"Client data submitted to public AI systems",d:"Free-tier public AI tools can retain and train on submitted data. Client contracts and personal information sent to these systems may violate PIPEDA and client agreements."}},
+{cat:"Cyber Insurance",text:"Has your cyber insurer asked about AI tool usage or AI governance in your last renewal?",ctx:"Many Canadian cyber insurers now include AI governance questions in renewals. Not having a documented policy can affect coverage.",w:1,
+opts:[{t:"Yes — and we provided full documentation",s:0},{t:"Yes — but we couldn't fully answer",s:1},{t:"Not yet — but renewal is coming up soon",s:1},{t:"No — they haven't asked about AI",note:"This is likely to change at your next renewal.",s:1}],
+gap:{t:"Cyber insurance AI compliance gap",d:"Insurers increasingly require documented AI policies. Without one you may face premium increases or denied claims after an AI-related incident."}},
+{cat:"Microsoft 365 & Copilot",text:"If your business uses Microsoft 365, has Copilot been configured with proper data boundaries?",ctx:"By default Copilot can access everything in your tenant. Without permission scoping it can surface data across departments and roles.",w:1,
+opts:[{t:"Yes — Copilot is configured and scoped correctly",s:0},{t:"We use M365 but Copilot hasn't been reviewed or scoped",s:1},{t:"We use M365 but haven't enabled or thought about Copilot",s:1},{t:"We don't use Microsoft 365",s:0}],
+gap:{t:"Microsoft 365 Copilot not configured safely",d:"Without permission scoping, Copilot can access your entire M365 tenant — email, files, and data beyond what each user should see — creating exposure across the organization."}},
+{cat:"Employee Training",text:"Have your employees received documented training on safe AI usage and data privacy?",ctx:"Documented means a record exists — not just a conversation. Insurers and regulators may ask for evidence.",w:1,
+opts:[{t:"Yes — documented training in the last 12 months",s:0},{t:"Informal conversations but nothing documented",s:1},{t:"No formal training on AI or data privacy",s:2},{t:"Not sure",s:2}],
+gap:{t:"No documented AI training",d:"Without training, employees can't know the rules — and missing training records make it harder to defend against a PIPEDA complaint or insurer inquiry."}},
+{cat:"Professional Regulatory Obligations",text:"Does your business operate under a professional body that has issued AI guidance?",ctx:"The Law Society of Ontario, CPA Canada, FSRA, and provincial health regulators have all published AI-specific guidance.",w:1,
+opts:[{t:"Yes — legal, accounting, financial, or healthcare — and we've reviewed their AI guidance",s:0},{t:"Yes — but we haven't reviewed their AI guidance yet",s:2},{t:"Not directly regulated by a professional body",s:0}],
+gap:{t:"Professional regulatory AI guidance not reviewed",d:"The Law Society of Ontario has warned lawyers about disciplinary action for AI data misuse. CPA Canada confirms accountants retain liability. Not reviewing this guidance adds professional risk on top of privacy risk."}},
+{cat:"Incident Response",text:"If an employee accidentally shared client data through an AI tool today, do you have a response plan?",ctx:"PIPEDA requires breach notification in cases of real risk of significant harm. A plan defines who does what, how fast.",w:1,
+opts:[{t:"Yes — a documented AI incident response plan",s:0},{t:"A general data-breach plan but nothing AI-specific",s:1},{t:"No — we don't have a plan",s:2},{t:"I'm not sure what we'd do",s:2}],
+gap:{t:"No AI incident response plan",d:"PIPEDA requires mandatory breach notification when there is real risk of significant harm. Without a plan, response is slower, costlier, and more likely to draw regulatory scrutiny."}},
+{cat:"Vendor Data Practices",text:"Do you know whether the AI tools your team uses train their models on your submitted data?",ctx:"Free tiers of ChatGPT, Gemini, and others may use your inputs for training. Business and enterprise tiers typically do not.",w:1,
+opts:[{t:"Yes — we use business/enterprise tiers that don't train on our data",s:0},{t:"We use free tiers but haven't checked the policies",s:2},{t:"We're not sure which tiers employees use",s:2},{t:"We don't use AI tools",s:0}],
+gap:{t:"AI vendor data-training risk",d:"Free-tier AI tools often retain and may train on submitted content. If employees use free ChatGPT with client data, that data may enter OpenAI's training pipeline — a direct PIPEDA concern."}},
+{cat:"Overall Posture",text:"If a client asked 'What is your AI data handling policy?' right now — how confident are you in your answer?",ctx:"More clients, especially in legal and financial sectors, ask this before engaging professional services firms.",w:1,
+opts:[{t:"Very confident — documentation ready to share",s:0},{t:"Somewhat confident — we'd figure something out",s:1},{t:"Not confident — we don't have a clear answer",s:2},{t:"A client already asked and we didn't have a good answer",s:2}],
+gap:{t:"Cannot confidently answer client AI questions",d:"Professional services firms are increasingly asked about AI data policies before engagement. The ability to answer clearly — with documentation — is becoming a competitive differentiator."}}
+];
+
+let cur=0, sel=new Array(Q.length).fill(null), lastResult=null;
+
+function render(){
+  const q=Q[cur];
+  document.getElementById('qCat').textContent=q.cat;
+  document.getElementById('qText').textContent=q.text;
+  document.getElementById('qCtx').textContent=q.ctx;
+  const list=document.getElementById('aList'); list.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');
+    b.className='aitem'+(sel[cur]===i?' on':'');
+    b.setAttribute('type','button');
+    b.innerHTML='<span class="adot"></span><span><span class="alabel">'+o.t+'</span>'+(o.note?'<span class="anote">'+o.note+'</span>':'')+'</span>';
+    b.onclick=()=>pick(i);
+    list.appendChild(b);
+  });
+  const pct=Math.round((cur/Q.length)*100);
+  document.getElementById('pFill').style.width=pct+'%';
+  document.getElementById('pLabel').textContent='Question '+(cur+1)+' of '+Q.length;
+  document.getElementById('pPct').textContent=pct+'%';
+  document.getElementById('bBack').style.display=cur===0?'none':'inline';
+  document.getElementById('bNext').disabled=sel[cur]===null;
+  document.getElementById('bNext').textContent=cur===Q.length-1?'See results →':'Continue →';
+}
+function pick(i){
+  sel[cur]=i;
+  document.querySelectorAll('.aitem').forEach((el,idx)=>el.classList.toggle('on',idx===i));
+  document.getElementById('bNext').disabled=false;
+}
+function next(){ if(sel[cur]===null)return; if(cur<Q.length-1){cur++;render();scrollTop();} else show(); }
+function prev(){ if(cur>0){cur--;render();scrollTop();} }
+function scrollTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+
+function show(){
+  document.getElementById('pFill').style.width='100%';
+  document.getElementById('pLabel').textContent='Complete';
+  document.getElementById('pPct').textContent='100%';
+  document.getElementById('qblock').style.display='none';
+  document.querySelector('.prog').style.display='none';
+  let raw=0,max=0; const gaps=[];
+  Q.forEach((q,qi)=>{const si=sel[qi]; if(si!==null){raw+=q.opts[si].s*q.w; max+=2*q.w; if(q.opts[si].s>=1&&q.gap)gaps.push(q.gap);}});
+  const score=Math.round((raw/max)*10);
+  let lvl,cls,head,sum,means;
+  if(score>=8){lvl='Critical risk';cls='l-crit';head='Your business has serious AI privacy exposure.';sum='Multiple gaps across policy, shadow AI visibility, and client-data handling create direct regulatory, insurance, and professional-liability risk. Based on your answers, your business is likely not defensible under a PIPEDA investigation in its current state.';means=['Your business may not be defensible under a PIPEDA investigation','Cyber insurance may not cover AI-related data incidents','You cannot confidently answer client or regulator questions about AI data handling','Pending PIPEDA reform in 2026 will raise the stakes further'];}
+  else if(score>=5){lvl='High risk';cls='l-high';head='Significant gaps that create real regulatory exposure.';sum='You have some awareness of AI privacy risk but critical pieces are missing. The gaps identified put your business at risk under PIPEDA, may affect cyber-insurance coverage, and leave you unable to meet professional regulatory obligations.';means=['One AI data incident could trigger mandatory PIPEDA breach notification','Documentation gaps may affect cyber-insurance claims','Employees may be exposing client data without knowing the risk','Ongoing PIPEDA reform increases the urgency of closing these gaps'];}
+  else if(score>=3){lvl='Moderate risk';cls='l-mod';head='A foundation is in place but gaps remain.';sum='Your business has taken some steps toward AI governance but areas need attention. PIPEDA reform moving through Parliament in 2026 means what is sufficient today may not be sufficient at your next renewal.';means=['PIPEDA reform in 2026 may require policy updates','Ongoing monitoring of new AI tools employees adopt is missing','Documentation gaps may surface at cyber-insurance renewal'];}
+  else{lvl='Low risk';cls='l-low';head='Solid AI governance foundations are in place.';sum='Based on your answers, your business has good fundamentals. The main risk is staying current as regulations evolve — AI-specific obligations under PIPEDA are expected to increase through 2026 and 2027.';means=['PIPEDA reform in 2026 will require policy reviews','Annual shadow AI audits are becoming standard practice','New AI tools adopted by employees should be reviewed before use'];}
+  document.getElementById('rScore').textContent=score;
+  const lv=document.getElementById('rLvl'); lv.textContent=lvl; lv.className='lvl '+cls;
+  document.getElementById('rHead').textContent=head;
+  document.getElementById('rSum').textContent=sum;
+  const gh=document.getElementById('gHead'),gl=document.getElementById('gList');
+  if(gaps.length){gh.textContent=gaps.length+' gap'+(gaps.length>1?'s':'')+' identified';gl.innerHTML='';gaps.forEach((g,i)=>{const d=document.createElement('div');d.className='grow';d.style.animationDelay=(i*0.05)+'s';d.innerHTML='<span class="gnum">'+(i+1)+'</span><div><div class="gtitle">'+g.t+'</div><div class="gdesc">'+g.d+'</div></div>';gl.appendChild(d);});}
+  else{gh.textContent='No major gaps identified';}
+  document.getElementById('mList').innerHTML=means.map(m=>'<div class="mi"><span class="mdash">—</span>'+m+'</div>').join('');
+  lastResult={score:score,level:lvl,gaps:gaps.map(g=>g.t)};
+  document.getElementById('assessment').style.display='none';
+  document.getElementById('res').classList.add('on');
+  scrollTop();
+}
+function copyResults(){
+  if(!lastResult)return;
+  let txt='AI Privacy Risk Assessment — Result\n';
+  txt+='Score: '+lastResult.score+'/10 ('+lastResult.level+')\n';
+  if(lastResult.gaps.length){txt+='\nGaps identified:\n'+lastResult.gaps.map((g,i)=>(i+1)+'. '+g).join('\n');}
+  txt+='\n\nAssessed at aiprivacyassessment.com';
+  navigator.clipboard.writeText(txt).then(()=>{const b=document.getElementById('copyBtn');const o=b.textContent;b.textContent='✓ Copied';setTimeout(()=>b.textContent=o,2000);});
+}
+function restart(){cur=0;sel=new Array(Q.length).fill(null);document.getElementById('res').classList.remove('on');document.getElementById('assessment').style.display='block';document.getElementById('qblock').style.display='block';document.querySelector('.prog').style.display='block';render();scrollTop();}
+render();
+</script>
 </body>
 </html>
