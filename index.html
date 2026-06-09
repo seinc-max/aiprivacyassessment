@@ -523,6 +523,7 @@ function show(){
   else{gh.textContent='No major gaps identified';}
   document.getElementById('mList').innerHTML=means.map(m=>'<div class="mi"><span class="mdash">—</span>'+m+'</div>').join('');
   lastResult={score:score,level:lvl,gaps:gaps.map(g=>g.t)};
+  try{history.replaceState(null,'','#r='+sel.join(''));}catch(e){}
   document.getElementById('assessment').style.display='none';
   document.getElementById('res').classList.add('on');
   scrollTop();
@@ -532,11 +533,12 @@ function copyResults(){
   let txt='AI Privacy Risk Assessment — Result\n';
   txt+='Score: '+lastResult.score+'/10 ('+lastResult.level+')\n';
   if(lastResult.gaps.length){txt+='\nGaps identified:\n'+lastResult.gaps.map((g,i)=>(i+1)+'. '+g).join('\n');}
-  txt+='\n\nAssessed at aiprivacyassessment.com';
+  txt+='\n\nFull breakdown: https://aiprivacyassessment.com/#r='+sel.join('');
   navigator.clipboard.writeText(txt).then(()=>{const b=document.getElementById('copyBtn');const o=b.textContent;b.textContent='✓ Copied';setTimeout(()=>b.textContent=o,2000);});
 }
-function restart(){cur=0;sel=new Array(Q.length).fill(null);document.getElementById('res').classList.remove('on');document.getElementById('assessment').style.display='block';document.getElementById('qblock').style.display='block';document.querySelector('.prog').style.display='block';render();scrollTop();}
-render();
+function restart(){cur=0;sel=new Array(Q.length).fill(null);document.getElementById('res').classList.remove('on');document.getElementById('assessment').style.display='block';document.getElementById('qblock').style.display='block';document.querySelector('.prog').style.display='block';try{history.replaceState(null,'',location.pathname);}catch(e){}render();scrollTop();}
+const hm=location.hash.match(/^#r=([0-3]{10})$/);
+if(hm){sel=hm[1].split('').map(Number);if(sel.every((v,i)=>v<Q[i].opts.length)){show();}else{render();}}else{render();}
 </script>
 </body>
 </html>
